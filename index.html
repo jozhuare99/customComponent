@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component</title>
+</head>
+<script defer src="index.js"></script>
+<script defer src="expandable list.js"></script>
+
+<body>
+    <style>
+        h3{
+            color: red
+        }
+        
+    </style>
+    <h3>other</h3>
+    <todo-item checked="true">Todo 1 <span slot="description">Shoot</span></todo-item>    
+    <todo-item>Todo 2</todo-item>    
+    <todo-item>Todo 3</todo-item>    
+    <ul is="expandable-list" data-expanded>
+        <li>First</li>
+        <li>Second</li>
+        <ul is="expandable-list" data-expanded>
+            <li>First</li>
+            <li>Second</li>
+            <ul is="expandable-list" data-expanded>
+                <li>First</li>
+                <li>Second</li>
+            </ul>
+        </ul>
+    </ul>
+</body>
+</html>
